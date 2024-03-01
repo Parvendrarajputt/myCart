@@ -2,22 +2,32 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+import logo from "../../src/logo.png";
+import Start from './Start';
 
 const Navbar = () => {
   const { cart } = useSelector((state) => state);
 
   return (
-    <div className="bg-slate-900 px-4 md:px-80 md:py-3">
+    <div className="bg-slate-900 px-4 md:px-36 md:py-3">
       <div className="flex justify-between items-center">
         <NavLink to="/">
           <div className="ml-5">
             <img
-              src="logo.png"
+              src={logo}
               alt="Logo"
               className="w-26 h-16"
             />
           </div>
+
+          {/* This showuld appear only one time in the project  */}
         </NavLink>
+{/*         
+        <NavLink to="/">
+        <Start/>
+        </NavLink> */}
+
+
         <div className="flex space-x-4 gap-6 items-center text-white">
           <NavLink to="/" className="hidden md:inline">
             <p className="cursor-pointer transform hover:scale-110 transition-transform duration-300">

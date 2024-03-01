@@ -15,6 +15,7 @@ const App = () => {
 
 
 {/* routes */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Cart" element={<Cart />} />
@@ -23,5 +24,5 @@ const App = () => {
     </div>
   );
 };
-// export the app
+
 export default App;
